@@ -17,4 +17,11 @@ func SetupRoutes(app *fiber.App) {
 	users.Get("/", handlers.GetUsers)
 	users.Post("/login", handlers.LoginUser)
 	users.Post("/refresh", handlers.RefreshToken)
+	// WALLET ROUTES
+	wallet := api.Group("/wallet")
+	wallet.Post("/connect", handlers.ConnectWallet)
+	wallet.Get("/balance", handlers.GetWalletBalance)
+	wallet.Post("/send", handlers.SendCrypto)
+	wallet.Get("/transaction", handlers.GetTransactions)
 }
+
