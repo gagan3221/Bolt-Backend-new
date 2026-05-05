@@ -10,7 +10,7 @@ import (
 	"bolt-backend/database"
 	"bolt-backend/routes"
 
-	_ "bolt-backend/docs"
+
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
